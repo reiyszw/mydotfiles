@@ -1,3 +1,10 @@
+fpath=(
+  ${HOME}/.zsh/completions
+  ${fpath}
+)
+autoload -Uz compinit
+compinit
+
 alias dev='cd ~/Develop'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -10,9 +17,10 @@ alias nb='npm run build'
 alias y='yarn'
 alias yd='yarn dev'
 alias ys='yarn storybook'
-alias yt='yarn test:unil'
+alias yt='yarn test:unit'
 alias yb='yarn build'
 alias yp='yarn preview'
+alias yc='yarn chromatic'
 
 alias g='git'
 alias gst='git status'
@@ -26,20 +34,12 @@ alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gsw='git switch'
 alias gswc='git switch -c'
-alias glog='git log'
+alias gl='git log'
 alias gpm='git pull origin main'
 alias grh='git reset --hard HEAD'
-alias grao='git remote add origin'
-alias gcl='git clone'
 
 alias d='docker'
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias di='docker images'
-alias drd='docker run -d'
-alias dre='docker run exec -it'
 alias dc='docker compose'
-alias dcu='docker compose up'
 
 alias v='code'
 alias sz='source ~/.zshrc'
